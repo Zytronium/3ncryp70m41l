@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // Native OS notifications for new mail (#126). Delivery is per platform:
@@ -20,7 +20,7 @@ import (
 // also what the toast prints under itself. beeep defaults it to the literal
 // string "DefaultAppName", which is what Pelton's notifications used to be
 // labelled with everywhere (#170).
-const notifyAppName = "Pelton"
+const notifyAppName = "EncryptoMail"
 
 // notification is one OS notification waiting to be delivered. The message id
 // travels with it so a platform that can report a click back (Windows) knows

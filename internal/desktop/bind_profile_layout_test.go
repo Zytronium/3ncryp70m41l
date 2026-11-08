@@ -3,7 +3,7 @@ package desktop
 import (
 	"testing"
 
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // layoutTestFolder creates an account with two folders and returns their ids.

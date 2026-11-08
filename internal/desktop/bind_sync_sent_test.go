@@ -14,11 +14,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/peltonapp/Pelton/internal/certtrust"
-	"github.com/peltonapp/Pelton/internal/credentials"
-	pimap "github.com/peltonapp/Pelton/internal/imap"
-	"github.com/peltonapp/Pelton/internal/outbox"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/certtrust"
+	"github.com/zytronium/3ncryp70m41l/internal/credentials"
+	pimap "github.com/zytronium/3ncryp70m41l/internal/imap"
+	"github.com/zytronium/3ncryp70m41l/internal/outbox"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // submissionServer is enough of a submission server to carry one message:

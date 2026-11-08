@@ -5,8 +5,8 @@ import (
 	"log/slog"
 	"time"
 
-	"github.com/peltonapp/Pelton/internal/crypto"
-	"github.com/peltonapp/Pelton/internal/outbox"
+	"github.com/zytronium/3ncryp70m41l/internal/crypto"
+	"github.com/zytronium/3ncryp70m41l/internal/outbox"
 )
 
 // Enqueue builds the message (applying crypto when requested) and adds it to the

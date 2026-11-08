@@ -3,7 +3,7 @@ package desktop
 import (
 	"testing"
 
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // TestLocalLabelStaysOffOutgoingMail is the bug from #326: the sidebar name and

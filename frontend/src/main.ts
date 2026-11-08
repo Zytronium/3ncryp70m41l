@@ -1,15 +1,7 @@
-// bundled ui and mono fonts via @fontsource (no runtime cdn). weights cover the
-// regular/medium/semibold/bold the ui uses and the mono weights for mail bodies.
-import '@fontsource/familjen-grotesk/400.css'
-import '@fontsource/familjen-grotesk/500.css'
-import '@fontsource/familjen-grotesk/600.css'
-import '@fontsource/familjen-grotesk/700.css'
-
-import '@fontsource/spline-sans-mono/300.css'
-import '@fontsource/spline-sans-mono/400.css'
-import '@fontsource/spline-sans-mono/500.css'
-import '@fontsource/spline-sans-mono/600.css'
-import '@fontsource/spline-sans-mono/700.css'
+// These fonts are bundled with the app; the webview makes no font requests.
+import './assets/fonts/fonts.css'
+import '@fontsource/noto-sans-arabic/400.css'
+import '@fontsource/noto-sans-sc/400.css'
 
 // theme tokens must load before the base styles that reference them.
 import './theme/tokens.css'

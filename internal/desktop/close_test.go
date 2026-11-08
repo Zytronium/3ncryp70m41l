@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 func newCloseTestApp(t *testing.T) *App {

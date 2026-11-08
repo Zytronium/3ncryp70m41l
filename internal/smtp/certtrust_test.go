@@ -11,7 +11,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/peltonapp/Pelton/internal/certtrust"
+	"github.com/zytronium/3ncryp70m41l/internal/certtrust"
 )
 
 // selfSignedSubmission starts an implicit-TLS submission server with httptest's

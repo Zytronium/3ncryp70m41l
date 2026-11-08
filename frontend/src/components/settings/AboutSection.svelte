@@ -10,7 +10,7 @@
   import { BrowserOpenURL } from '../../../wailsjs/runtime/runtime'
   import { APP } from '../../lib/app-info'
   import { appVersion, checkForUpdates, defaultMailClientStatus, setDefaultMailClient, isNightly, getDiagnostics, openLogFolder, type UpdateCheckResult } from '../../lib/api'
-  import nightlyLogo from '../../assets/images/icons/pelton-nightly-logo.png'
+  import nightlyLogo from '../../assets/images/icons/encryptomail-nightly-logo.png'
   import { onUpdateAvailable } from '../../lib/events'
   import { prefs, setUpdateCheckFrequency } from '../../stores/prefs'
   import { toastError, errorMessage } from '../../stores/toast'

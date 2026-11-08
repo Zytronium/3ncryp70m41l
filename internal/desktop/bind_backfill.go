@@ -3,7 +3,7 @@ package desktop
 import (
 	"fmt"
 
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // Fetching older mail on demand (#175). A first sync only caches a folder's

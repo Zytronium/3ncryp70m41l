@@ -10,8 +10,8 @@ import (
 	"embed"
 	"os"
 
-	"github.com/peltonapp/Pelton/internal/logging"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/logging"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 	"github.com/wailsapp/wails/v2"
 	"github.com/wailsapp/wails/v2/pkg/options"
 	"github.com/wailsapp/wails/v2/pkg/options/assetserver"
@@ -61,17 +61,17 @@ func Run(cfg Config) error {
 	// a dev build (PELTON_DEV) and a nightly both run against their own data and
 	// must not share the single-instance lock with an installed Pelton, or
 	// launching one would just surface the other and exit.
-	instanceID := "com.pelton.app"
+	instanceID := "dev.zytronium.encryptomail"
 	switch {
 	case os.Getenv("PELTON_DEV") != "":
-		instanceID = "com.pelton.app.dev"
+		instanceID = "dev.zytronium.encryptomail.dev"
 	case cfg.Channel != "":
-		instanceID = "com.pelton.app." + cfg.Channel
+		instanceID = "dev.zytronium.encryptomail." + cfg.Channel
 	}
 
-	title := "Pelton"
+	title := "EncryptoMail"
 	if cfg.Channel == storage.ChannelNightly {
-		title = "Pelton Nightly"
+		title = "EncryptoMail Nightly"
 	}
 
 	return wails.Run(&options.App{

@@ -7,7 +7,7 @@
   import { fade, scale } from 'svelte/transition'
   import { createEventDispatcher } from 'svelte'
   import { t } from '../../lib/i18n'
-  import nightlyLogo from '../../assets/images/icons/pelton-nightly-logo.png'
+  import nightlyLogo from '../../assets/images/icons/encryptomail-nightly-logo.png'
 
   const dispatch = createEventDispatcher<{ accepted: void }>()
 

@@ -5,9 +5,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/peltonapp/Pelton/internal/crypto"
-	"github.com/peltonapp/Pelton/internal/mailview"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/crypto"
+	"github.com/zytronium/3ncryp70m41l/internal/mailview"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // The dtos below are the flat shapes the frontend receives. They exist so the ui

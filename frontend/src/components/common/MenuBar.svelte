@@ -318,7 +318,7 @@
   <nav
     class="menubar"
     class:raised={openKey !== null}
-    aria-label="Pelton"
+    aria-label="EncryptoMail"
     bind:this={barEl}
     on:keydown={onBarKeydown}
     on:focusout={onBarFocusOut}

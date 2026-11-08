@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/peltonapp/Pelton/internal/search"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/search"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // maxViewMatches caps how many messages a single view resolves to. It bounds the

@@ -1,4 +1,4 @@
-module github.com/peltonapp/Pelton
+module github.com/zytronium/3ncryp70m41l
 
 go 1.26.0
 

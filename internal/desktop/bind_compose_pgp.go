@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/peltonapp/Pelton/internal/credentials"
-	"github.com/peltonapp/Pelton/internal/crypto"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/credentials"
+	"github.com/zytronium/3ncryp70m41l/internal/crypto"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // Protection is what the user asked for on one message, as the compose window

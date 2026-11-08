@@ -15,7 +15,7 @@ import (
 	"github.com/emersion/go-imap/v2"
 	"github.com/wailsapp/wails/v2/pkg/runtime"
 
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // maxPreviewBytes caps how large an attachment we will stream to the ui for the

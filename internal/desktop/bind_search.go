@@ -7,9 +7,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/peltonapp/Pelton/internal/mailview"
-	"github.com/peltonapp/Pelton/internal/search"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/mailview"
+	"github.com/zytronium/3ncryp70m41l/internal/search"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // settingSearchWatermark records the highest message id already indexed, so the

@@ -16,8 +16,8 @@ import (
 	"github.com/emersion/go-imap/v2"
 	"github.com/emersion/go-imap/v2/imapclient"
 
-	"github.com/peltonapp/Pelton/internal/certtrust"
-	"github.com/peltonapp/Pelton/internal/charsetguess"
+	"github.com/zytronium/3ncryp70m41l/internal/certtrust"
+	"github.com/zytronium/3ncryp70m41l/internal/charsetguess"
 )
 
 // DialFunc opens a raw tcp connection; the proxy layer supplies one to route

@@ -1,7 +1,7 @@
 package desktop
 
 import (
-	"github.com/peltonapp/Pelton/internal/charsetguess"
+	"github.com/zytronium/3ncryp70m41l/internal/charsetguess"
 )
 
 // settingCharsetFallback is how text with no usable charset is read: "auto",

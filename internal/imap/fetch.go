@@ -8,8 +8,8 @@ import (
 	"github.com/emersion/go-imap/v2"
 	"github.com/emersion/go-imap/v2/imapclient"
 
-	"github.com/peltonapp/Pelton/internal/charsetguess"
-	"github.com/peltonapp/Pelton/internal/rfc822"
+	"github.com/zytronium/3ncryp70m41l/internal/charsetguess"
+	"github.com/zytronium/3ncryp70m41l/internal/rfc822"
 )
 
 // Mailbox summarises a selected mailbox.

@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // newTestQueue opens a real migrated store in a temp dir and seeds one account,

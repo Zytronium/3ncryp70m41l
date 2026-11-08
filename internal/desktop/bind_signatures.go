@@ -1,7 +1,7 @@
 package desktop
 
 import (
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // signatures: reusable header/footer blocks the user manages in settings, assigns

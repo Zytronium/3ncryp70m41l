@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/peltonapp/Pelton/internal/credentials"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/credentials"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 	"golang.org/x/oauth2"
 )
 

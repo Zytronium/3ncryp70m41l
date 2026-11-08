@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	pimap "github.com/peltonapp/Pelton/internal/imap"
-	"github.com/peltonapp/Pelton/internal/outbox"
-	"github.com/peltonapp/Pelton/internal/storage"
+	pimap "github.com/zytronium/3ncryp70m41l/internal/imap"
+	"github.com/zytronium/3ncryp70m41l/internal/outbox"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // draftTestApp is pgpTestApp with the account's IMAP connection faked and a

@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/peltonapp/Pelton/internal/mcpserver"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/mcpserver"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // agentActionLimit caps the log view. It is a record for answering "what did it

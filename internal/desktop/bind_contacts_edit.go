@@ -5,8 +5,8 @@ import (
 	"errors"
 	"strings"
 
-	pcarddav "github.com/peltonapp/Pelton/internal/carddav"
-	"github.com/peltonapp/Pelton/internal/storage"
+	pcarddav "github.com/zytronium/3ncryp70m41l/internal/carddav"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // Writing contacts back (#168).

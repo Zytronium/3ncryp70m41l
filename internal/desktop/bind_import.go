@@ -8,8 +8,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/peltonapp/Pelton/internal/mailimport"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/mailimport"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 	"github.com/wailsapp/wails/v2/pkg/runtime"
 )
 

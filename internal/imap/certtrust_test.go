@@ -11,7 +11,7 @@ import (
 	"github.com/emersion/go-imap/v2/imapserver"
 	"github.com/emersion/go-imap/v2/imapserver/imapmemserver"
 
-	"github.com/peltonapp/Pelton/internal/certtrust"
+	"github.com/zytronium/3ncryp70m41l/internal/certtrust"
 )
 
 // selfSignedIMAP starts an imap server with httptest's self-signed certificate,

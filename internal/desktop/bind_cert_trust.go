@@ -6,10 +6,10 @@ import (
 	"io"
 	"os"
 
-	"github.com/peltonapp/Pelton/internal/certtrust"
-	pimap "github.com/peltonapp/Pelton/internal/imap"
-	psmtp "github.com/peltonapp/Pelton/internal/smtp"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/certtrust"
+	pimap "github.com/zytronium/3ncryp70m41l/internal/imap"
+	psmtp "github.com/zytronium/3ncryp70m41l/internal/smtp"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 	"github.com/wailsapp/wails/v2/pkg/runtime"
 )
 

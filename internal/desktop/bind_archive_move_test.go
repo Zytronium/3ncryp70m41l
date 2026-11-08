@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 func moveTestApp(t *testing.T) (*App, *storage.DB, context.Context) {

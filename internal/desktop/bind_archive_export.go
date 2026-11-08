@@ -6,7 +6,7 @@ import (
 
 	"github.com/wailsapp/wails/v2/pkg/runtime"
 
-	"github.com/peltonapp/Pelton/internal/mailexport"
+	"github.com/zytronium/3ncryp70m41l/internal/mailexport"
 )
 
 // validSubfolderMode keeps an unknown mode from reaching the exporter, where it

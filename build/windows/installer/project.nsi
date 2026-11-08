@@ -52,9 +52,9 @@ Unicode true
 ## change. The uninstaller removes it. Must match notifyAppName on the Go side.
 ####
 !ifdef PELTON_NIGHTLY
-    !define PELTON_AUMID "Pelton Nightly"
+    !define PELTON_AUMID "EncryptoMail Nightly"
 !else
-    !define PELTON_AUMID "Pelton"
+    !define PELTON_AUMID "EncryptoMail"
 !endif
 ####
 ## Include the wails tools

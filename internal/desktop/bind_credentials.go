@@ -4,11 +4,11 @@ import (
 	"errors"
 	"os"
 
-	"github.com/peltonapp/Pelton/internal/credentials"
-	pimap "github.com/peltonapp/Pelton/internal/imap"
-	"github.com/peltonapp/Pelton/internal/oauth"
-	psmtp "github.com/peltonapp/Pelton/internal/smtp"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/credentials"
+	pimap "github.com/zytronium/3ncryp70m41l/internal/imap"
+	"github.com/zytronium/3ncryp70m41l/internal/oauth"
+	psmtp "github.com/zytronium/3ncryp70m41l/internal/smtp"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 	"golang.org/x/oauth2"
 )
 

@@ -62,7 +62,7 @@
   import { pfpDataUri, type PfpStyle } from '../../lib/pfp'
   import { initials } from '../../lib/format'
   import { shortcutLabel, t } from '../../lib/i18n'
-  import logo from '../../assets/images/icons/pelton-logo.png'
+  import logo from '../../assets/images/icons/encryptomail-logo.png'
   import type { ThemePref, DensityPref, Account } from '../../lib/types'
 
   const dispatch = createEventDispatcher<{ finish: void; added: Account }>()
@@ -291,7 +291,7 @@
   }
 </script>
 
-<div class="screen" role="dialog" aria-modal="true" aria-label="Welcome to Pelton">
+<div class="screen" role="dialog" aria-modal="true" aria-label="Welcome to EncryptoMail">
   <!-- no skip before the acknowledgement is given: it is the one thing the flow
        does not let you walk past, and skipping from the welcome screen would
        jump straight over it. -->
@@ -307,7 +307,7 @@
       <div class="step" in:fade={{ duration: 120 }}>
         {#if step === 'welcome'}
           <div class="welcome">
-            <img class="logo" src={logo} alt="Pelton" in:scale={{ start: 0.7, duration: 600, easing: backOut }} />
+            <img class="logo" src={logo} alt="EncryptoMail" in:scale={{ start: 0.7, duration: 600, easing: backOut }} />
             <h1>{$t('onboarding.welcome')}</h1>
             <p class="lede">
               {$t('onboarding.welcomeLede')}

@@ -3,8 +3,8 @@ package desktop
 import (
 	"testing"
 
-	pimap "github.com/peltonapp/Pelton/internal/imap"
-	psmtp "github.com/peltonapp/Pelton/internal/smtp"
+	pimap "github.com/zytronium/3ncryp70m41l/internal/imap"
+	psmtp "github.com/zytronium/3ncryp70m41l/internal/smtp"
 )
 
 func TestTLSModeMapping(t *testing.T) {

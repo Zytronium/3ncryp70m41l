@@ -7,7 +7,7 @@ import (
 
 	wailsruntime "github.com/wailsapp/wails/v2/pkg/runtime"
 
-	"github.com/peltonapp/Pelton/internal/themepack"
+	"github.com/zytronium/3ncryp70m41l/internal/themepack"
 )
 
 // ThemeImportPreviewDTO is the read-before-import view of a chosen theme

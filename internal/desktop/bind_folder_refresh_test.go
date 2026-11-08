@@ -7,8 +7,8 @@ import (
 
 	goimap "github.com/emersion/go-imap/v2"
 
-	pimap "github.com/peltonapp/Pelton/internal/imap"
-	"github.com/peltonapp/Pelton/internal/storage"
+	pimap "github.com/zytronium/3ncryp70m41l/internal/imap"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 func storedPaths(t *testing.T, a *App, accountID int64) []string {

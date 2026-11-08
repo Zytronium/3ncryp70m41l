@@ -8,7 +8,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/peltonapp/Pelton/internal/themepack"
+	"github.com/zytronium/3ncryp70m41l/internal/themepack"
 )
 
 // The palette editor (#57) saves its themes as regular .peltontheme files in

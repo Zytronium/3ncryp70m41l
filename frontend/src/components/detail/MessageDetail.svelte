@@ -2,7 +2,7 @@
   // column 3: the reading pane. it loads the open message, shows the header,
   // action toolbar, sanitized body and attachments, and performs the toolbar
   // actions. empty, loading and error states are explicit.
-  import peltonLogo from '../../assets/images/icons/pelton-logo.png'
+  import encryptoMailLogo from '../../assets/images/icons/encryptomail-logo.png'
   import DetailHeader from './DetailHeader.svelte'
   import ActionToolbar from './ActionToolbar.svelte'
   import MailBody from './MailBody.svelte'
@@ -253,11 +253,11 @@ ${bodyHtml}
         class="placeholder placeholder-full"
         style={`background-image: url("${$prefs.emptyStateImage}")`}
         role="img"
-        aria-label="Pelton"
+        aria-label="EncryptoMail"
       ></div>
     {:else}
       <div class="placeholder">
-        <img class="placeholder-logo" src={$prefs.emptyStateImage || peltonLogo} alt="Pelton" draggable="false" />
+        <img class="placeholder-logo" src={$prefs.emptyStateImage || encryptoMailLogo} alt="EncryptoMail" draggable="false" />
       </div>
     {/if}
   {:else if activeTabStale}

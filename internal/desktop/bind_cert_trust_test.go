@@ -12,9 +12,9 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/peltonapp/Pelton/internal/certtrust"
-	pimap "github.com/peltonapp/Pelton/internal/imap"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/certtrust"
+	pimap "github.com/zytronium/3ncryp70m41l/internal/imap"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // serverCert is a self-signed certificate like the one Proton Mail Bridge

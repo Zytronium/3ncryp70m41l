@@ -118,7 +118,7 @@
     setLogMessageMetadata,
     setCrashLogs,
   } from '../../stores/prefs'
-  import peltonLogo from '../../assets/images/icons/pelton-logo.png'
+  import encryptoMailLogo from '../../assets/images/icons/encryptomail-logo.png'
   import { isMac } from '../../lib/i18n'
   import { downloadRange, cancelDownload, openLocalesFolder, saveLocaleTemplate, getLogStatus, openLogFolder, deleteLogs } from '../../lib/api'
   import en from '../../lib/locales/en'
@@ -956,7 +956,7 @@
             <p class="hint">{$t('settingsPanel.hint.emptyStateImage')}</p>
             <div class="empty-image-row">
               <div class="empty-image-preview">
-                <img src={$prefs.emptyStateImage || peltonLogo} alt="" draggable="false" />
+                <img src={$prefs.emptyStateImage || encryptoMailLogo} alt="" draggable="false" />
               </div>
               <div class="empty-image-actions">
                 <button type="button" class="action-btn" on:click={() => emptyImageInput?.click()}>

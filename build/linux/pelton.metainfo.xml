@@ -9,10 +9,10 @@
   desktop-id must match the installed pelton.desktop for that link to work.
 -->
 <component type="desktop-application">
-  <id>sh.arne.Pelton</id>
+  <id>dev.zytronium.encryptomail</id>
   <launchable type="desktop-id">pelton.desktop</launchable>
 
-  <name>Pelton</name>
+  <name>EncryptoMail</name>
   <summary>Open-source desktop email client</summary>
 
   <metadata_license>CC0-1.0</metadata_license>
@@ -24,7 +24,7 @@
 
   <description>
     <p>
-      Pelton is an open-source, cross-platform desktop email client built with
+      EncryptoMail is an open-source, cross-platform desktop email client built with
       Wails, Svelte and Go. It focuses on privacy: remote images and tracking
       pixels are blocked by default, and the interface stays fast and native.
     </p>

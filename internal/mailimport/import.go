@@ -29,8 +29,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/peltonapp/Pelton/internal/rfc822"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/rfc822"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // Importer writes parsed messages into the local store.

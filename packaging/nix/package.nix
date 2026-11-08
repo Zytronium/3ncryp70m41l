@@ -20,7 +20,7 @@
 }:
 
 buildGoModule (finalAttrs: {
-  pname = "pelton";
+  pname = "3ncryp70m41l";
   inherit version src;
 
   __structuredAttrs = true;
@@ -79,10 +79,10 @@ buildGoModule (finalAttrs: {
   installPhase = ''
     runHook preInstall
 
-    install -Dm755 build/bin/pelton $out/bin/pelton
-    install -Dm644 build/linux/pelton.desktop $out/share/applications/pelton.desktop
-    install -Dm644 build/linux/pelton.metainfo.xml $out/share/metainfo/pelton.metainfo.xml
-    install -Dm644 build/icons/pelton-512.png $out/share/icons/hicolor/512x512/apps/pelton.png
+    install -Dm755 build/bin/EncryptoMail $out/bin/EncryptoMail
+    install -Dm644 build/linux/pelton.desktop $out/share/applications/EncryptoMail.desktop
+    install -Dm644 build/linux/pelton.metainfo.xml $out/share/metainfo/dev.zytronium.encryptomail.metainfo.xml
+    install -Dm644 build/icons/pelton-512.png $out/share/icons/hicolor/512x512/apps/dev.zytronium.encryptomail.png
 
     runHook postInstall
   '';
@@ -99,6 +99,6 @@ buildGoModule (finalAttrs: {
     changelog = "https://github.com/peltonapp/Pelton/releases/tag/v${lib.head (lib.splitString "+" finalAttrs.version)}";
     license = lib.licenses.gpl3Plus;
     platforms = lib.platforms.linux;
-    mainProgram = "pelton";
+    mainProgram = "EncryptoMail";
   };
 })

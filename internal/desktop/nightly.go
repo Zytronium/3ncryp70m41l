@@ -1,6 +1,6 @@
 package desktop
 
-import "github.com/peltonapp/Pelton/internal/storage"
+import "github.com/zytronium/3ncryp70m41l/internal/storage"
 
 // Nightly builds are cut automatically from the dev branch by
 // .github/workflows/nightly.yml. They are untested, unreviewed and expected to

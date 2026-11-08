@@ -4,8 +4,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/peltonapp/Pelton/internal/search"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/search"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // selectAllCap is the most ids one select-all will hand back. A selection is an

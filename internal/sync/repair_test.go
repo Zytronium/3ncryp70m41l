@@ -7,8 +7,8 @@ import (
 
 	"github.com/emersion/go-imap/v2"
 
-	pimap "github.com/peltonapp/Pelton/internal/imap"
-	"github.com/peltonapp/Pelton/internal/storage"
+	pimap "github.com/zytronium/3ncryp70m41l/internal/imap"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // repairClient serves one message and can be told to refuse, which is what a

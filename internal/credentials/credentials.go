@@ -14,7 +14,7 @@ import (
 
 	keyring "github.com/zalando/go-keyring"
 
-	"github.com/peltonapp/Pelton/internal/logging"
+	"github.com/zytronium/3ncryp70m41l/internal/logging"
 )
 
 // remember hands a secret to the log redactor so it can never appear in a log

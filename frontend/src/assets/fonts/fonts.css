@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Gltp Starion";
+  src: url("./GltpStarion.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Victor Mono Nerd Font";
+  src: url("./VictorMonoNerdFont.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Glitch Goblin";
+  src: url("./GlitchGoblin.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}

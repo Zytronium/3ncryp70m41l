@@ -238,18 +238,18 @@
     list: typeof $messageList,
     tFn: (key: string) => string,
   ): void {
-    let title = 'Pelton'
+    let title = 'EncryptoMail'
     if (inSettings) {
-      setWindowTitle(`${tFn('settings.title')} - Pelton`)
+      setWindowTitle(`${tFn('settings.title')} - EncryptoMail`)
       return
     }
     if (id !== null) {
       const item = list.data?.items?.find((m) => m.id === id)
       if (item) {
-        title = `${item.subject || tFn('app.noSubject')} - Pelton`
+        title = `${item.subject || tFn('app.noSubject')} - EncryptoMail`
       }
     } else if (sel) {
-      title = `${sel.label} - Pelton`
+      title = `${sel.label} - EncryptoMail`
     }
     setWindowTitle(title)
   }

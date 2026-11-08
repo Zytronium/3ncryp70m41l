@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/peltonapp/Pelton/internal/logging"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/logging"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 func TestDebugForced(t *testing.T) {

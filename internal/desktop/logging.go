@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/peltonapp/Pelton/internal/logging"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/logging"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // logging setting keys. All of them default off on a stable build.

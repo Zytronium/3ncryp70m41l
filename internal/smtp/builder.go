@@ -8,7 +8,7 @@ import (
 	"mime/quotedprintable"
 	"strings"
 
-	"github.com/peltonapp/Pelton/internal/crypto"
+	"github.com/zytronium/3ncryp70m41l/internal/crypto"
 )
 
 const (

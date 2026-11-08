@@ -204,7 +204,7 @@ export function defaultMenuLayout(): MenuBarLayout {
       {
         id: 'app',
         builtin: true,
-        label: 'Pelton',
+        label: 'EncryptoMail',
         items: [
           action('about'),
           sep('app', 0),

@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	pimap "github.com/peltonapp/Pelton/internal/imap"
-	"github.com/peltonapp/Pelton/internal/storage"
+	pimap "github.com/zytronium/3ncryp70m41l/internal/imap"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // The bug this guards: a folder that failed to sync was logged and skipped, and

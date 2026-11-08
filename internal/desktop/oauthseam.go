@@ -3,8 +3,8 @@ package desktop
 import (
 	"context"
 
-	"github.com/peltonapp/Pelton/internal/credentials"
-	"github.com/peltonapp/Pelton/internal/oauth"
+	"github.com/zytronium/3ncryp70m41l/internal/credentials"
+	"github.com/zytronium/3ncryp70m41l/internal/oauth"
 	"golang.org/x/oauth2"
 )
 

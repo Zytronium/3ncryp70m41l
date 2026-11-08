@@ -21,9 +21,9 @@ import (
 
 	"github.com/emersion/go-imap/v2"
 
-	pimap "github.com/peltonapp/Pelton/internal/imap"
-	"github.com/peltonapp/Pelton/internal/storage"
-	psync "github.com/peltonapp/Pelton/internal/sync"
+	pimap "github.com/zytronium/3ncryp70m41l/internal/imap"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
+	psync "github.com/zytronium/3ncryp70m41l/internal/sync"
 )
 
 const inboxPath = "INBOX"

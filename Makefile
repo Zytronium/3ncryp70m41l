@@ -1,4 +1,4 @@
-# Pelton - email client (Wails + Svelte)
+# EncryptoMail - email client (Wails + Svelte)
 
 .PHONY: build build-mac build-win build-linux build-nix dmg run run-nightly app-dev dev clean tidy deps licenses icon disclaimer sync-docs
 
@@ -26,22 +26,22 @@ icon:
 # macOS build that also installs the Liquid Glass icon into the .app, and ships
 # the warranty/liability terms inside the bundle so they travel with the copy.
 build-mac: build icon
-	cp DISCLAIMER.md build/bin/Pelton.app/Contents/Resources/DISCLAIMER.md
+	cp DISCLAIMER.md build/bin/EncryptoMail.app/Contents/Resources/DISCLAIMER.md
 
-# macOS build packaged into a distributable .dmg (build/bin/Pelton.dmg), with a
+# macOS build packaged into a distributable .dmg (build/bin/EncryptoMail.dmg), with a
 # drag-to-Applications drop link. Needs create-dmg (`brew install create-dmg`).
 dmg: build-mac
-	rm -f build/bin/Pelton.dmg
+	rm -f build/bin/EncryptoMail.dmg
 	create-dmg \
-		--volname "Pelton" \
-		--volicon "build/bin/Pelton.app/Contents/Resources/pelton.icns" \
+		--volname "EncryptoMail" \
+		--volicon "build/bin/EncryptoMail.app/Contents/Resources/pelton.icns" \
 		--window-size 540 380 \
 		--icon-size 128 \
-		--icon "Pelton.app" 130 170 \
+		--icon "EncryptoMail.app" 130 170 \
 		--app-drop-link 410 170 \
-		--hide-extension "Pelton.app" \
-		"build/bin/Pelton.dmg" \
-		"build/bin/Pelton.app"
+		--hide-extension "EncryptoMail.app" \
+		"build/bin/EncryptoMail.dmg" \
+		"build/bin/EncryptoMail.app"
 
 # windows build (amd64). cross-compiling from another OS needs the appropriate
 # toolchain (mingw-w64) and webview2; run on Windows for a no-fuss build.
@@ -54,12 +54,12 @@ build-win: disclaimer
 build-linux:
 	wails build -platform linux/amd64 $(WEBKIT_TAGS) -ldflags "$(LDFLAGS)"
 	cp build/linux/pelton.desktop build/bin/pelton.desktop
-	@echo "linux binary + pelton.desktop in build/bin (install the .desktop and an icon named 'pelton')"
+	@echo "Linux binary and desktop entry are in build/bin."
 
 # nix packaging build: same as build-linux but tagged for nixpkgs'
 # webkitgtk_4_1 (nixpkgs dropped the older webkit2gtk 4.0 build)
 build-nix:
-	wails build -tags webkit2_41 -ldflags "$(LDFLAGS)" -o pelton
+	wails build -tags webkit2_41 -ldflags "$(LDFLAGS)" -o EncryptoMail
 
 # run the whole app in dev mode: make sure go + npm deps are present, regenerate
 # the typescript bindings from the go methods, then launch wails dev with hot

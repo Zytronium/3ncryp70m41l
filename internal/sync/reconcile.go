@@ -12,7 +12,7 @@ package sync
 import (
 	"slices"
 
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // Conflict policy, documented here so it is obvious and easy to change later:

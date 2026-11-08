@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/peltonapp/Pelton/internal/smtp"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/smtp"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // ErrSendAtInvalid is returned when a ComposeRequest.SendAt string does not

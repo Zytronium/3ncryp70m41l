@@ -3,7 +3,7 @@ package desktop
 import (
 	"sync"
 
-	psync "github.com/peltonapp/Pelton/internal/sync"
+	psync "github.com/zytronium/3ncryp70m41l/internal/sync"
 )
 
 // syncTally accumulates what a sync run is doing, so the status bar can show a

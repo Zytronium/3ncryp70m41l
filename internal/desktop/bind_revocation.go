@@ -5,8 +5,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/peltonapp/Pelton/internal/crypto"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/crypto"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // settingSMIMERevocation turns on asking each sender's certificate authority

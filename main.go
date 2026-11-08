@@ -9,8 +9,8 @@ import (
 	"os"
 	"slices"
 
-	"github.com/peltonapp/Pelton/internal/desktop"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/desktop"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 //go:embed all:frontend/dist

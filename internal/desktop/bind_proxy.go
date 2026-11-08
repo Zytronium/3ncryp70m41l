@@ -8,9 +8,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/peltonapp/Pelton/internal/credentials"
-	"github.com/peltonapp/Pelton/internal/proxy"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/credentials"
+	"github.com/zytronium/3ncryp70m41l/internal/proxy"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // proxyTestTarget is the host:port the connection test dials through the proxy.

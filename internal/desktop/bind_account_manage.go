@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"slices"
 
-	"github.com/peltonapp/Pelton/internal/credentials"
-	pimap "github.com/peltonapp/Pelton/internal/imap"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/credentials"
+	pimap "github.com/zytronium/3ncryp70m41l/internal/imap"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // errEmptyPassword rejects a blank password rather than storing one that can

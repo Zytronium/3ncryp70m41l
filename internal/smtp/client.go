@@ -21,7 +21,7 @@ import (
 	"github.com/emersion/go-sasl"
 	gosmtp "github.com/emersion/go-smtp"
 
-	"github.com/peltonapp/Pelton/internal/certtrust"
+	"github.com/zytronium/3ncryp70m41l/internal/certtrust"
 )
 
 const (

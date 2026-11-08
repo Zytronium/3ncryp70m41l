@@ -5,8 +5,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/peltonapp/Pelton/internal/phishing"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/phishing"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // auth statuses the ui shows on a message. "unavailable" means the receiving

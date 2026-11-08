@@ -5,8 +5,8 @@ import (
 
 	"github.com/emersion/go-imap/v2"
 
-	"github.com/peltonapp/Pelton/internal/mailexport"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/mailexport"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // ArchiveUndoDTO carries what undo needs to move a message back: its stable rfc

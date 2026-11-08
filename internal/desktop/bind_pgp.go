@@ -11,8 +11,8 @@ import (
 
 	"github.com/wailsapp/wails/v2/pkg/runtime"
 
-	"github.com/peltonapp/Pelton/internal/credentials"
-	"github.com/peltonapp/Pelton/internal/crypto"
+	"github.com/zytronium/3ncryp70m41l/internal/credentials"
+	"github.com/zytronium/3ncryp70m41l/internal/crypto"
 )
 
 // keyDirName is the key directory under the app data dir, so a nightly build

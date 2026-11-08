@@ -9,9 +9,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/peltonapp/Pelton/internal/crypto"
-	"github.com/peltonapp/Pelton/internal/smtp"
-	"github.com/peltonapp/Pelton/internal/storage"
+	"github.com/zytronium/3ncryp70m41l/internal/crypto"
+	"github.com/zytronium/3ncryp70m41l/internal/smtp"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 )
 
 // Unsubscribe support (#71). Preference order per the List-Unsubscribe headers

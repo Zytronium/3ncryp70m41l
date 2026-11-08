@@ -8,7 +8,7 @@
 # build time. The single source is the vendored tarball produced by the
 # release workflow: repository sources plus Go's vendor/ and a symlink-free
 # frontend/node_modules.
-id: sh.arne.Pelton
+id: dev.zytronium.encryptomail
 
 runtime: org.gnome.Platform
 runtime-version: '50'
@@ -20,7 +20,7 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.golang
   - org.freedesktop.Sdk.Extension.node22
 
-command: pelton
+command: EncryptoMail
 
 # The Linux release is amd64 only.
 only-arches:
@@ -66,22 +66,22 @@ modules:
       # The tag is read from the VERSION file the release workflow puts in the
       # tarball, so a version bump here is only ever the url and its checksum
       # and the external data checker can do it unattended.
-      - go build -tags webkit2_41 -ldflags "-s -w -X main.version=$(cat VERSION)" -o pelton .
-      - install -Dm755 pelton /app/bin/pelton
+      - go build -tags webkit2_41 -ldflags "-s -w -X main.version=$(cat VERSION)" -o EncryptoMail .
+      - install -Dm755 EncryptoMail /app/bin/EncryptoMail
       - install -Dm644 build/icons/pelton-512.png
-        /app/share/icons/hicolor/512x512/apps/sh.arne.Pelton.png
+        /app/share/icons/hicolor/512x512/apps/dev.zytronium.encryptomail.png
       - install -Dm644 build/linux/pelton.desktop
-        /app/share/applications/sh.arne.Pelton.desktop
+        /app/share/applications/dev.zytronium.encryptomail.desktop
       - install -Dm644 build/linux/pelton.metainfo.xml
-        /app/share/metainfo/sh.arne.Pelton.metainfo.xml
+        /app/share/metainfo/dev.zytronium.encryptomail.metainfo.xml
       # The .desktop and .metainfo files are shared with the .deb/.rpm, which
       # install them under the plain "pelton" name. Flatpak requires both to
       # carry the application id instead, so point them at the renamed files
       # here rather than forking a second copy of each.
-      - desktop-file-edit --set-icon=sh.arne.Pelton
-        /app/share/applications/sh.arne.Pelton.desktop
-      - sed -i 's|>pelton\.desktop<|>sh.arne.Pelton.desktop<|'
-        /app/share/metainfo/sh.arne.Pelton.metainfo.xml
+      - desktop-file-edit --set-icon=dev.zytronium.encryptomail
+        /app/share/applications/dev.zytronium.encryptomail.desktop
+      - sed -i 's|>pelton\.desktop<|>dev.zytronium.encryptomail.desktop<|'
+        /app/share/metainfo/dev.zytronium.encryptomail.metainfo.xml
 
     sources:
       - type: archive

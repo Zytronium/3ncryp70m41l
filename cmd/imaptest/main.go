@@ -18,7 +18,7 @@ import (
 
 	"github.com/emersion/go-imap/v2"
 
-	pimap "github.com/peltonapp/Pelton/internal/imap"
+	pimap "github.com/zytronium/3ncryp70m41l/internal/imap"
 )
 
 const (

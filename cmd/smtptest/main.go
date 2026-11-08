@@ -29,11 +29,11 @@ import (
 	"syscall"
 	"time"
 
-	pcrypto "github.com/peltonapp/Pelton/internal/crypto"
-	pimap "github.com/peltonapp/Pelton/internal/imap"
-	"github.com/peltonapp/Pelton/internal/outbox"
-	psmtp "github.com/peltonapp/Pelton/internal/smtp"
-	"github.com/peltonapp/Pelton/internal/storage"
+	pcrypto "github.com/zytronium/3ncryp70m41l/internal/crypto"
+	pimap "github.com/zytronium/3ncryp70m41l/internal/imap"
+	"github.com/zytronium/3ncryp70m41l/internal/outbox"
+	psmtp "github.com/zytronium/3ncryp70m41l/internal/smtp"
+	"github.com/zytronium/3ncryp70m41l/internal/storage"
 
 	"log/slog"
 )
