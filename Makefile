@@ -69,14 +69,14 @@ build-nix:
 # accounts, mail cache or settings.
 run: deps
 	wails generate module
-	PELTON_DEV=1 wails dev $(WEBKIT_TAGS) -ldflags "$(LDFLAGS)"
+	WAILS_DEV_ALLOWED_HOSTS=wails.localhost PELTON_DEV=1 wails dev $(WEBKIT_TAGS) -ldflags "$(LDFLAGS)"
 
 # run the app in the cosmetic demo mode (--potatoes-are-nice): the ui fills with
 # fixed potato-themed sample data for website screenshots and never touches real
 # accounts, mail or the network. Same dev setup as `run`, just with the flag.
 nice-potatoes: deps
 	wails generate module
-	PELTON_DEV=1 wails dev $(WEBKIT_TAGS) -appargs "--potatoes-are-nice" -ldflags "$(LDFLAGS)"
+	WAILS_DEV_ALLOWED_HOSTS=wails.localhost PELTON_DEV=1 wails dev $(WEBKIT_TAGS) -appargs "--potatoes-are-nice" -ldflags "$(LDFLAGS)"
 
 # run the app as a nightly build would behave: the launch warning dialog, the
 # status bar marker and the nightly name/icon in the about block. PELTON_DEV
@@ -84,7 +84,7 @@ nice-potatoes: deps
 # nightly one either.
 run-nightly: deps
 	wails generate module
-	PELTON_DEV=1 wails dev $(WEBKIT_TAGS) -ldflags "$(LDFLAGS) -X main.channel=nightly"
+	WAILS_DEV_ALLOWED_HOSTS=wails.localhost PELTON_DEV=1 wails dev $(WEBKIT_TAGS) -ldflags "$(LDFLAGS) -X main.channel=nightly"
 
 dev: run
 
