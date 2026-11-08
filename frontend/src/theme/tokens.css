@@ -20,6 +20,7 @@
     type       --fz-list, --fz-body, --fz-label, --fz-meta, --fz-heading, weights
     spacing    --space-1..6 (fixed) plus density driven row/pane spacing
     elevation  --shadow-overlay
+    effects    --blur-* and --motion-*
 
   accent handling:
     --accent is injected at runtime from the user's chosen hex (default #465AF2).
@@ -43,8 +44,9 @@
      They have to be named in the default stacks and not only appended to a
      stack the user picked, or a reader on the default font would download the
      face and never render a glyph with it. */
-  --font-ui: "Familjen Grotesk", system-ui, -apple-system, "Noto Sans Arabic", "Noto Sans SC", sans-serif;
-  --font-mono: "Spline Sans Mono", ui-monospace, "SFMono-Regular", "Noto Sans Arabic", "Noto Sans SC", monospace;
+  --font-ui: "Gltp Starion", system-ui, -apple-system, "Noto Sans Arabic", "Noto Sans SC", sans-serif;
+  --font-mono: "Victor Mono Nerd Font", ui-monospace, "SFMono-Regular", "Noto Sans Arabic", "Noto Sans SC", monospace;
+  --font-brand: "Glitch Goblin", "Gltp Starion", system-ui, sans-serif;
 
   /* type sizes. message list 13px, body 13-14, labels/meta 11-12. */
   --fz-meta: 11px;
@@ -72,6 +74,18 @@
   --radius-card: 5px;
   --radius-none: 0;
 
+  /* Layer blur remains optional so Reduced and Off effects can remove it. */
+  --blur-subtle: 2px;
+  --blur-layer: 6px;
+  --blur-overlay: 12px;
+
+  /* Short, interruptible spatial transitions. */
+  --motion-fast: 150ms;
+  --motion-layer: 240ms;
+  --motion-slow: 350ms;
+  --motion-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --motion-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
   /* borders are hairlines throughout. */
   --hairline: 0.5px;
 
@@ -91,7 +105,7 @@
 
   /* accent. --accent and --accent-fg are overwritten at runtime by accent.ts.
      the derivations below stay in css so they track whatever accent is set. */
-  --accent: #465af2;
+  --accent: #42d9ff;
   --accent-fg: #ffffff;
   --selection-bg: color-mix(in srgb, var(--accent) 14%, transparent);
   --selection-bg-strong: color-mix(in srgb, var(--accent) 22%, transparent);
@@ -99,6 +113,7 @@
 
   /* elevation, used sparingly for overlays and popovers. */
   --shadow-overlay: 0 8px 24px rgba(0, 0, 0, 0.18);
+  --shadow-layer: 0 16px 40px rgba(16, 24, 39, 0.16);
 
   /* default density (medium) row + pane spacing. overridden per density below. */
   --row-pad-y: 8px;
@@ -151,16 +166,16 @@
 :root[data-theme="dark"] {
   color-scheme: dark;
 
-  --surface-base: #111214;
-  --surface-raised: #1a1c1f;
-  --surface-overlay: #222428;
-  --surface-sunken: #161719;
-  --surface-hover: #25282d;
+  --surface-base: #101827;
+  --surface-raised: #122d43;
+  --surface-overlay: #173850;
+  --surface-sunken: #0c1420;
+  --surface-hover: #1b3b52;
 
-  --text-primary: #ecedee;
-  --text-secondary: #b4b7bd;
-  --text-tertiary: #7e828b;
-  --text-inverse: #ffffff;
+  --text-primary: #f0f6fc;
+  --text-secondary: #c3d0df;
+  --text-tertiary: #8b9bb4;
+  --text-inverse: #101827;
 
   --border-subtle: rgba(255, 255, 255, 0.06);
   --border-default: rgba(255, 255, 255, 0.12);
@@ -168,6 +183,7 @@
 
   /* lighten the link derivation so the accent reads on dark surfaces. */
   --link: color-mix(in srgb, var(--accent) 72%, white);
+  --accent-fg: #101827;
   --selection-bg: color-mix(in srgb, var(--accent) 22%, transparent);
   --selection-bg-strong: color-mix(in srgb, var(--accent) 32%, transparent);
 
@@ -184,6 +200,33 @@
   --scrim: rgba(0, 0, 0, 0.55);
 
   --shadow-overlay: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-layer: 0 16px 40px rgba(0, 0, 0, 0.42);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-fast: 0ms;
+    --motion-layer: 0ms;
+    --motion-slow: 0ms;
+  }
+}
+
+:root[data-effects="reduced"] {
+  --blur-subtle: 0px;
+  --blur-layer: 0px;
+  --blur-overlay: 0px;
+  --shadow-layer: 0 8px 20px rgba(16, 24, 39, 0.12);
+}
+
+:root[data-effects="off"] {
+  --blur-subtle: 0px;
+  --blur-layer: 0px;
+  --blur-overlay: 0px;
+  --shadow-layer: none;
+  --shadow-overlay: none;
+  --motion-fast: 0ms;
+  --motion-layer: 0ms;
+  --motion-slow: 0ms;
 }
 
 /* density variants. these swap only spacing and line-height tokens, so every
