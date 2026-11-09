@@ -162,6 +162,39 @@ func TestSnippetFallsBackToHTML(t *testing.T) {
 // was why right-to-left mail arrived left-aligned with its numbers and
 // punctuation out of order: the sender had answered the question and the
 // sanitizer removed the answer.
+func TestSanitizeInlinesEmailStylesheets(t *testing.T) {
+	html := `<html><head><style>.card { background-color: #102b55; color: #ffffff; padding: 24px; position: fixed; } .card a { color: #aaccff; }</style></head><body><div class="card"><a href="https://example.com">Confirm</a></div></body></html>`
+	got := Sanitize(html, false, false)
+	for _, want := range []string{`background-color: #102b55`, `color: #ffffff`, `padding: 24px`, `color: #aaccff`} {
+		if !strings.Contains(got, want) {
+			t.Errorf("Sanitize() = %q, want it to contain %q", got, want)
+		}
+	}
+	if strings.Contains(got, "<style") {
+		t.Errorf("Sanitize() kept a style element: %q", got)
+	}
+	if strings.Contains(got, "position: fixed") {
+		t.Errorf("Sanitize() kept a disallowed style: %q", got)
+	}
+}
+
+func TestSanitizeKeepsCommonInlineEmailStyles(t *testing.T) {
+	html := `<body style="background: linear-gradient(to bottom, #020617, #000000); color: #ededed"><table style="background: linear-gradient(to bottom, rgba(30, 58, 138, 0.8), rgba(15, 23, 42, 0.9)); border-radius: 12px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); overflow: hidden"><tr><td style="letter-spacing: -0.5px; max-width: 600px; display: block">Welcome</td></tr></table></body>`
+	got := Sanitize(html, false, false)
+	for _, want := range []string{
+		`linear-gradient(to bottom, #020617, #000000)`,
+		`rgba(30, 58, 138, 0.8)`,
+		`border-radius: 12px`,
+		`box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5)`,
+		`max-width: 600px`,
+		`letter-spacing: -0.5px`,
+	} {
+		if !strings.Contains(got, want) {
+			t.Errorf("Sanitize() = %q, want it to contain %q", got, want)
+		}
+	}
+}
+
 func TestSanitizeKeepsDirection(t *testing.T) {
 	for _, tt := range []struct {
 		name string

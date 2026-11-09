@@ -18,6 +18,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
+	"github.com/aymerick/douceur/inliner"
 	"github.com/emersion/go-message"
 	"github.com/emersion/go-message/mail"
 	"github.com/microcosm-cc/bluemonday"
@@ -49,6 +50,9 @@ var remoteURLPattern = regexp.MustCompile(`(?i)(src|background|href)\s*=\s*["']?
 // cidRefPattern matches a cid: url referencing an inline attachment by its
 // content id, with or without surrounding quotes.
 var cidRefPattern = regexp.MustCompile(`(?i)cid:([^"'>\s)]+)`)
+
+var safeLinearGradientPattern = regexp.MustCompile(`^linear-gradient\(to (bottom|top|left|right|bottom right|bottom left|top right|top left),\s*(#[0-9a-f]{3,8}|rgba?\(\s*[0-9]{1,3}\s*,\s*[0-9]{1,3}\s*,\s*[0-9]{1,3}(\s*,\s*(0(\.[0-9]+)?|1(\.0+)?))?\s*\))\s*,\s*(#[0-9a-f]{3,8}|rgba?\(\s*[0-9]{1,3}\s*,\s*[0-9]{1,3}\s*,\s*[0-9]{1,3}(\s*,\s*(0(\.[0-9]+)?|1(\.0+)?))?\s*\))\s*\)$`)
+var safeBoxShadowPattern = regexp.MustCompile(`^(0|-?[0-9]+(\.[0-9]+)?px)\s+(-?[0-9]+(\.[0-9]+)?px)\s+([0-9]+(\.[0-9]+)?px)\s+rgba\([0-9, .]+\)$`)
 
 // the policies are built once, one per combination of the two choices that
 // change them. They share the ugc base. allowRemote decides which url schemes
@@ -84,13 +88,16 @@ func buildPolicy(allowRemote, allowFonts bool) *bluemonday.Policy {
 	// (img-src) when remote content is off, so keeping it does not leak.
 	p.AllowStyles("color", "background-color", "background", "text-align",
 		"font-weight", "font-style", "text-decoration", "font-size", "line-height",
-		"margin", "padding", "border", "border-color",
-		// direction and unicode-bidi are how html mail says it reads right to
-		// left (#356). Stripping them was why Hebrew and Arabic mail arrived
-		// left-aligned with its punctuation and numbers out of order: the sender
-		// had said which way to read it and the sanitizer removed the answer.
-		// Neither can do anything but lay text out.
-		"direction", "unicode-bidi").Globally()
+		"margin", "padding", "border", "border-color", "border-radius", "box-shadow",
+		"max-width", "height", "display", "overflow", "letter-spacing", "word-break").Globally()
+	p.AllowStyles("background").Matching(safeLinearGradientPattern).Globally()
+	p.AllowStyles("box-shadow").Matching(safeBoxShadowPattern).Globally()
+	// direction and unicode-bidi are how html mail says it reads right to
+	// left (#356). Stripping them was why Hebrew and Arabic mail arrived
+	// left-aligned with its punctuation and numbers out of order: the sender
+	// had said which way to read it and the sanitizer removed the answer.
+	// Neither can do anything but lay text out.
+	p.AllowStyles("direction", "unicode-bidi").Globally()
 
 	// the dir attribute is the other half of that, and the more common one: it
 	// is what a mail client writes on <html>, <body> or a <div> rather than a
@@ -172,6 +179,9 @@ func buildPolicy(allowRemote, allowFonts bool) *bluemonday.Policy {
 // allowFonts keeps the message's own font families; with it off everything
 // renders in the reader's font.
 func Sanitize(html string, allowRemote, allowFonts bool) string {
+	if inlined, err := inliner.Inline(html); err == nil {
+		html = inlined
+	}
 	p := policies[[2]bool{allowRemote, allowFonts}]
 	if allowRemote {
 		return p.Sanitize(html)

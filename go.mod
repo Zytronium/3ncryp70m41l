@@ -7,6 +7,7 @@ require (
 	github.com/JohannesKaufmann/html-to-markdown/v2 v2.5.2
 	github.com/ProtonMail/go-crypto v1.5.2
 	github.com/VirusTotal/vt-go v1.1.0
+	github.com/aymerick/douceur v0.2.0
 	github.com/blevesearch/bleve/v2 v2.6.1
 	github.com/emersion/go-imap/v2 v2.0.0-beta.8
 	github.com/emersion/go-message v0.18.2
@@ -36,8 +37,9 @@ require (
 require (
 	git.sr.ht/~jackmordaunt/go-toast/v2 v2.0.3 // indirect
 	github.com/JohannesKaufmann/dom v0.3.1 // indirect
+	github.com/PuerkitoBio/goquery v1.10.3 // indirect
 	github.com/RoaringBitmap/roaring/v2 v2.14.5 // indirect
-	github.com/aymerick/douceur v0.2.0 // indirect
+	github.com/andybalholm/cascadia v1.3.4 // indirect
 	github.com/bep/debounce v1.2.1 // indirect
 	github.com/bits-and-blooms/bitset v1.24.2 // indirect
 	github.com/blevesearch/bleve_index_api v1.4.1 // indirect
