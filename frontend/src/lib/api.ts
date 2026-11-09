@@ -1383,6 +1383,7 @@ export const SettingKeys = {
   menuBarNewItems: 'menu_bar_new_items',
   timeFormat: 'time_format',
   reduceMotion: 'reduce_motion',
+  effects: 'visual_effects',
   handCursor: 'hand_cursor',
   unreadBadge: 'dock_badge',
   themeDarkStart: 'theme_dark_start',

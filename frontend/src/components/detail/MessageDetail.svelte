@@ -243,7 +243,7 @@ ${bodyHtml}
   }
 </script>
 
-<section class="detail">
+<section class="detail" class:message-open={$visibleMessageId !== null}>
   {#if $hasTabs}
     <TabBar />
   {/if}
@@ -349,10 +349,33 @@ ${bodyHtml}
 
   .detail {
     display: flex;
+    position: relative;
+    z-index: 2;
+    border-inline-start: var(--hairline) solid var(--border-subtle);
+    box-shadow: var(--shadow-layer);
     flex-direction: column;
     height: 100%;
     background: var(--surface-raised);
     min-width: 0;
+  }
+
+  .detail.message-open {
+    animation: reader-forward var(--motion-layer) var(--motion-ease-out) both;
+  }
+
+  @keyframes reader-forward {
+    from {
+      opacity: 0.8;
+      transform: translateX(var(--space-4));
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  :root[data-effects="off"] .detail.message-open {
+    animation: none;
   }
 
   /* with no message selected the pane shows the Pelton mark, faded, as a calm

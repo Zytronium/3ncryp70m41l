@@ -666,7 +666,7 @@
 
 <svelte:window on:resize={onResize} />
 
-<section class="list-col">
+<section class="list-col" aria-label={$t('messageList.ariaLabel')}>
   <div class="header">
     <SearchBar value={$searchQuery} on:search={onSearch} on:filter={onFilter} on:sort={onSort} />
   </div>
@@ -843,10 +843,14 @@
 <style>
   .list-col {
     display: grid;
+    position: relative;
+    z-index: 1;
     grid-template-rows: auto auto 1fr;
     height: 100%;
     background: var(--surface-raised);
     border-inline-end: var(--hairline) solid var(--border-default);
+    box-shadow: var(--shadow-layer);
+    transition: transform var(--motion-layer) var(--motion-ease), box-shadow var(--motion-layer) var(--motion-ease);
     min-width: 0;
   }
 

@@ -543,6 +543,8 @@ export interface UIPrefs {
   timeFormat: string
   // reduceMotion disables ui transitions and animations.
   reduceMotion: boolean
+  // effects controls optional spatial depth styling.
+  effects: 'full' | 'reduced' | 'off'
   // handCursor shows the browser hand over clickable chrome instead of the
   // native arrow. Hyperlinks keep the hand regardless.
   handCursor: boolean

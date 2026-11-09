@@ -140,6 +140,8 @@ WebKitGTK handles `backdrop-filter` and large blurs less smoothly than Chromium.
 - Ice white #F0F6FC
 - Steel #8B9BB4
 
+This should be the default color pallete, but adjust based on accent color chosen.
+
 ## 13. Typography
 Primary: GltpStarion.otf
 Monospace: VictorMonoNerdFont.ttf

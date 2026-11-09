@@ -80,6 +80,7 @@ const defaults: UIPrefs = {
   menuBarIcons: false,
   timeFormat: 'auto',
   reduceMotion: false,
+  effects: 'reduced',
   handCursor: false,
   unreadBadge: true,
   themeDarkStart: '19:00',
@@ -123,6 +124,7 @@ function applyAll(p: UIPrefs): void {
   applyAccent(p.accent)
   applyScale(p.uiScale)
   applyReduceMotion(p.reduceMotion)
+  applyEffects(p.effects)
   applyHandCursor(p.handCursor)
   applyUIFont(uiFontStack(p.uiFont))
   applyMonoFont(monoFontStack(p.monoFont))
@@ -501,6 +503,18 @@ export function setReduceMotion(value: boolean): void {
   prefs.update((p) => ({ ...p, reduceMotion: value }))
   applyReduceMotion(value)
   void setSetting(SettingKeys.reduceMotion, String(value))
+}
+
+function applyEffects(value: string): void {
+  const effects = value === 'full' || value === 'off' ? value : 'reduced'
+  document.documentElement.dataset.effects = effects
+}
+
+/** Sets the visual effects level and persists it with the other UI settings. */
+export function setEffects(value: 'full' | 'reduced' | 'off'): void {
+  prefs.update((p) => ({ ...p, effects: value }))
+  applyEffects(value)
+  void setSetting(SettingKeys.effects, value)
 }
 
 // setHandCursor switches clickable chrome between the native arrow and the

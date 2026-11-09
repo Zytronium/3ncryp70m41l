@@ -108,6 +108,7 @@
     setMenuBarIcons,
     setTimeFormat,
     setReduceMotion,
+    setEffects,
     setHandCursor,
     setThemeDarkTimes,
     setBodyFont,
@@ -919,6 +920,17 @@
             {/if}
           {/if}
           <AccentPicker />
+          <SegmentedSetting
+            label="Effects"
+            value={$prefs.effects}
+            options={[
+              { key: 'full', label: 'Full' },
+              { key: 'reduced', label: 'Reduced' },
+              { key: 'off', label: 'Off' },
+            ]}
+            on:change={(e) => setEffects(e.detail as 'full' | 'reduced' | 'off')}
+          />
+          <p class="hint">Depth styling can be reduced or disabled for smoother rendering.</p>
           <SegmentedSetting label={$t('settingsPanel.label.density')} value={$prefs.density} options={densityOptions} on:change={onDensity} />
           <SegmentedSetting
             label={$t('settingsPanel.label.corners')}

@@ -78,6 +78,11 @@
   --blur-subtle: 2px;
   --blur-layer: 6px;
   --blur-overlay: 12px;
+  --ambient-glow: color-mix(in srgb, var(--accent) 10%, transparent);
+  --layer-scale-near: 0.985;
+  --layer-scale-far: 0.97;
+  --layer-opacity-near: 0.82;
+  --layer-opacity-far: 0.62;
 
   /* Short, interruptible spatial transitions. */
   --motion-fast: 150ms;
@@ -130,20 +135,20 @@
 :root[data-theme="light"] {
   color-scheme: light;
 
-  --surface-base: #f6f6f7;
+  --surface-base: #f3f6f8;
   --surface-raised: #ffffff;
   --surface-overlay: #ffffff;
-  --surface-sunken: #efeff1;
-  --surface-hover: #ececef;
+  --surface-sunken: #e9eef2;
+  --surface-hover: #e7edf1;
 
-  --text-primary: #1a1b1e;
-  --text-secondary: #4a4d54;
-  --text-tertiary: #797d86;
+  --text-primary: #17232e;
+  --text-secondary: #435464;
+  --text-tertiary: #607386;
   --text-inverse: #ffffff;
 
-  --border-subtle: rgba(0, 0, 0, 0.06);
-  --border-default: rgba(0, 0, 0, 0.12);
-  --border-strong: rgba(0, 0, 0, 0.22);
+  --border-subtle: rgba(18, 45, 67, 0.07);
+  --border-default: rgba(18, 45, 67, 0.14);
+  --border-strong: rgba(18, 45, 67, 0.24);
 
   --success: #1a7f4b;
   --success-bg: color-mix(in srgb, #1a7f4b 12%, transparent);
@@ -174,7 +179,7 @@
 
   --text-primary: #f0f6fc;
   --text-secondary: #c3d0df;
-  --text-tertiary: #8b9bb4;
+  --text-tertiary: #a0b1c7;
   --text-inverse: #101827;
 
   --border-subtle: rgba(255, 255, 255, 0.06);
@@ -198,6 +203,7 @@
   --nightly-bg: color-mix(in srgb, #b965e2 22%, transparent);
 
   --scrim: rgba(0, 0, 0, 0.55);
+  --ambient-glow: color-mix(in srgb, var(--accent) 8%, transparent);
 
   --shadow-overlay: 0 8px 24px rgba(0, 0, 0, 0.5);
   --shadow-layer: 0 16px 40px rgba(0, 0, 0, 0.42);
@@ -215,7 +221,21 @@
   --blur-subtle: 0px;
   --blur-layer: 0px;
   --blur-overlay: 0px;
+  --layer-scale-near: 1;
+  --layer-scale-far: 1;
+  --layer-opacity-near: 1;
+  --layer-opacity-far: 1;
   --shadow-layer: 0 8px 20px rgba(16, 24, 39, 0.12);
+}
+
+:root[data-effects="full"] {
+  --blur-subtle: 2px;
+  --blur-layer: 6px;
+  --blur-overlay: 12px;
+  --layer-scale-near: 0.985;
+  --layer-scale-far: 0.97;
+  --layer-opacity-near: 0.82;
+  --layer-opacity-far: 0.62;
 }
 
 :root[data-effects="off"] {

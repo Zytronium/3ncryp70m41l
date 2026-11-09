@@ -1137,6 +1137,7 @@
       closeActiveTab()
       return
     }
+
     // nothing layered on top, so this closes the window itself. the backend owns
     // what that means: it follows the close action setting, and hides through
     // the same call the close button uses, which the dock icon can undo.
@@ -1573,7 +1574,13 @@
     grid-template-rows: minmax(0, 1fr);
     min-height: 0;
     overflow: hidden;
+    position: relative;
+    isolation: isolate;
+    background:
+      radial-gradient(ellipse at 62% 24%, var(--ambient-glow), transparent 54%),
+      var(--surface-base);
   }
+
 
   /* the dock spans the viewport width so extra panes wrap upward (wrap-reverse,
      bottom-anchored) instead of cascading off the left edge. it is click-through
