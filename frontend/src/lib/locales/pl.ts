@@ -1359,6 +1359,8 @@ const pl: Record<string, string> = {
   'settingsPanel.hint.startupSelection': 'Co pasek boczny wybiera przy uruchomieniu EncryptoMaila. Folder, który już nie istnieje, wraca do połączonej skrzynki odbiorczej.',
   'settingsPanel.startup.lastUsed': 'To, co miałem ostatnio otwarte',
   'settingsPanel.label.senderPhotos': 'Zdjęcia nadawców',
+  'settingsPanel.toggle.useGravatar': 'Wczytuj awatary Gravatar',
+  'settingsPanel.hint.useGravatar': 'Po włączeniu tej opcji dla źródła zdjęć nadawców korzystającego z Gravatar serwis otrzymuje skrót adresu e-mail nadawcy, aby wyszukać zdjęcie. Źródło Generowane nigdy nie wczytuje zdalnych zdjęć.',
   'settingsPanel.hint.avatarSource': '„Logo” to zweryfikowane logo BIMI domeny nadawcy. Logo i Gravatar pobierają obrazy przez sieć przy otwieraniu wiadomości; „Generowany” działa całkowicie offline. Gdy nie znaleziono zdjęcia, używany jest generowany styl poniżej.',
   'settingsPanel.label.generatedStyle': 'Generowany styl',
   'settingsPanel.hint.previewSender': 'Podgląd nadawcy:',

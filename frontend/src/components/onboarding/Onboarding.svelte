@@ -48,6 +48,7 @@
     setAppVimMode,
     setAvatarStyle,
     setAvatarSource,
+    setUseGravatar,
     setAlwaysLoadImages,
     setBlockTrackingPixels,
     setMessageFontSize,
@@ -116,15 +117,17 @@
   // separate stored field, so it always reflects what's actually active (and
   // so re-running onboarding shows the real current choice, not a guess).
   $: privacyMode =
-    $prefs.avatarSource === 'pfp' && !$prefs.alwaysLoadImages && $prefs.blockTrackingPixels ? 'private' : 'normal'
+    $prefs.avatarSource === 'pfp' && !$prefs.useGravatar && !$prefs.alwaysLoadImages && $prefs.blockTrackingPixels ? 'private' : 'normal'
 
   function selectPrivacy(mode: 'private' | 'normal'): void {
     if (mode === 'private') {
       setAvatarSource('pfp')
+      setUseGravatar(false)
       setAlwaysLoadImages(false)
       setBlockTrackingPixels(true)
     } else {
       setAvatarSource('bimi_gravatar')
+      setUseGravatar(true)
       setAlwaysLoadImages(true)
       setBlockTrackingPixels(false)
     }

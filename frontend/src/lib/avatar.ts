@@ -1,19 +1,22 @@
 // avatar.ts memoizes the remote photo candidate list for a sender so the same
 // sender (or bimi domain) is only resolved once per source preference. the
-// backend does the network work (bimi dns lookup, gravatar url); this dedupes
-// the binding calls across the many avatars in the message list. keyed by source
-// so changing the preference re-resolves.
+// backend resolves BIMI DNS and supplies Gravatar URLs; the webview requests the
+// image only when a candidate reaches an img element.
 
 import { senderPhotos } from './api'
 
 const cache = new Map<string, Promise<string[]>>()
 
-// photosFor returns the ordered remote photo candidates for a sender under the
-// given source preference. errors and the "pfp" source resolve to an empty list
-// so callers fall back to the generated placeholder.
-export function photosFor(source: string, email: string): Promise<string[]> {
+export function clearPhotoCache(): void {
+  cache.clear()
+}
+
+// photosFor returns remote candidates allowed by the selected source and the
+// Gravatar preference. errors and the "pfp" source resolve to an empty list so
+// callers fall back to the generated placeholder.
+export async function photosFor(source: string, email: string, useGravatar: boolean): Promise<string[]> {
   if (source === 'pfp' || !email) {
-    return Promise.resolve([])
+    return []
   }
   const key = `${source}:${email.toLowerCase()}`
   let pending = cache.get(key)
@@ -26,5 +29,14 @@ export function photosFor(source: string, email: string): Promise<string[]> {
       .catch(() => [])
     cache.set(key, pending)
   }
-  return pending
+  const photos = await pending
+  return useGravatar ? photos : photos.filter((photo) => !isGravatarURL(photo))
+}
+
+function isGravatarURL(photo: string): boolean {
+  try {
+    return new URL(photo).hostname.toLowerCase() === 'www.gravatar.com'
+  } catch {
+    return false
+  }
 }

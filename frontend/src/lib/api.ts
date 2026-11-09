@@ -1333,6 +1333,7 @@ export const SettingKeys = {
   onboarded: 'onboarding_complete',
   alwaysLoadImages: 'remote_images_always',
   avatarSource: 'avatar_source',
+  useGravatar: 'use_gravatar',
   avatarStyle: 'avatar_style',
   multiSelectEnabled: 'multi_select_enabled',
   selectAllScope: 'select_all_scope',

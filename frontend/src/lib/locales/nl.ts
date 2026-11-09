@@ -1406,6 +1406,8 @@ const nl: Record<string, string> = {
   'settingsPanel.hint.startupSelection': 'Wat de zijbalk selecteert wanneer EncryptoMail start. Een map die niet meer bestaat valt terug op de gecombineerde inbox.',
   'settingsPanel.startup.lastUsed': 'Wat ik het laatst open had',
   'settingsPanel.label.senderPhotos': 'Foto\'s van afzenders',
+  'settingsPanel.toggle.useGravatar': 'Gravatar-avatars laden',
+  'settingsPanel.hint.useGravatar': 'Als dit is ingeschakeld met een bron voor afzenderfoto’s die Gravatar gebruikt, ontvangt Gravatar een hash van het e-mailadres van de afzender om een foto op te zoeken. De bron Gegenereerd laadt nooit externe foto’s.',
   'settingsPanel.hint.avatarSource': '"Logo" is het geverifieerde BIMI-logo van het domein van de afzender. Logo en Gravatar halen afbeeldingen op via het netwerk wanneer je een bericht opent; "Gegenereerd" blijft volledig offline. Als er geen foto wordt gevonden, wordt de onderstaande gegenereerde stijl gebruikt.',
   'settingsPanel.label.generatedStyle': 'Gegenereerde stijl',
   'settingsPanel.hint.previewSender': 'Voorbeeldafzender:',

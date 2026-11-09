@@ -1406,6 +1406,8 @@ const en: Record<string, string> = {
   'settingsPanel.hint.startupSelection': 'What the sidebar selects when EncryptoMail starts. A folder that no longer exists falls back to the unified inbox.',
   'settingsPanel.startup.lastUsed': 'Whatever I had open last',
   'settingsPanel.label.senderPhotos': 'Sender photos',
+  'settingsPanel.toggle.useGravatar': 'Load Gravatar avatars',
+  'settingsPanel.hint.useGravatar': 'When enabled with a sender-photo source that includes Gravatar, Gravatar receives a hash of the sender’s email to look up a photo. The Generated source never loads remote photos.',
   'settingsPanel.hint.avatarSource': '"Logo" is the sender domain\'s verified BIMI logo. Logo and Gravatar fetch images over the network when you open a message; "Generated" stays fully offline. When no photo is found, the generated style below is used.',
   'settingsPanel.label.generatedStyle': 'Generated style',
   'settingsPanel.hint.previewSender': 'Preview sender:',

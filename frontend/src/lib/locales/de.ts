@@ -1406,6 +1406,8 @@ const de: Record<string, string> = {
   'settingsPanel.hint.startupSelection': 'Was die Seitenleiste beim Start von EncryptoMail auswählt. Ein Ordner, den es nicht mehr gibt, fällt auf den kombinierten Posteingang zurück.',
   'settingsPanel.startup.lastUsed': 'Zuletzt geöffnet',
   'settingsPanel.label.senderPhotos': 'Absenderfotos',
+  'settingsPanel.toggle.useGravatar': 'Gravatar-Avatare laden',
+  'settingsPanel.hint.useGravatar': 'Wenn die Option mit einer Absenderfotoquelle aktiviert ist, die Gravatar enthält, erhält Gravatar einen Hash der Absender-E-Mail-Adresse zur Fotosuche. Die Quelle „Generiert“ lädt niemals externe Fotos.',
   'settingsPanel.hint.avatarSource': '„Logo" ist das verifizierte BIMI-Logo der Absenderdomain. Logo und Gravatar laden Bilder über das Netzwerk, sobald du eine Nachricht öffnest; „Generiert" bleibt vollständig offline. Wird kein Foto gefunden, kommt der unten gewählte generierte Stil zum Einsatz.',
   'settingsPanel.label.generatedStyle': 'Generierter Stil',
   'settingsPanel.hint.previewSender': 'Vorschau-Absender:',

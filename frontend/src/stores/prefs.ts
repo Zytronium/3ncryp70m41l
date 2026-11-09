@@ -6,14 +6,15 @@
 
 import { writable } from 'svelte/store'
 import type { UIPrefs, ThemePref, DensityPref, EditorMode, ViewsPlacement, CloseAction, LogLevel, SelectAllScope, SearchKind, SearchSortPref } from '../lib/types'
-import { getUIPrefs, setSetting, SettingKeys, systemColorScheme, setWindowTheme, getThemeApply } from '../lib/api'
+import { getUIPrefs, getSetting, setSetting, SettingKeys, systemColorScheme, setWindowTheme, getThemeApply } from '../lib/api'
 import { applyTheme, applyDensity, applyAccent, applyScale, applyReduceMotion, applyHandCursor, setThemeSchedule, applyUIFont, applyMonoFont, applyCorners, watchSystemTheme, setSystemSchemeOverride, resolveTheme } from '../theme/theme'
 import { applyUserTheme } from '../theme/usertheme'
 import { uiFontStack, monoFontStack } from '../lib/fonts'
 import { setLocale } from '../lib/i18n'
+import { clearPhotoCache } from '../lib/avatar'
 
-// defaults match the backend defaults so the ui renders sanely even before the
-// first load resolves.
+// defaults match the backend defaults for backend-owned preferences; the
+// Gravatar choice follows the normal preset until its saved value is loaded.
 const defaults: UIPrefs = {
   theme: 'system',
   accent: '#465AF2',
@@ -34,6 +35,7 @@ const defaults: UIPrefs = {
   alwaysLoadImages: false,
   blockTrackingPixels: false,
   avatarSource: 'bimi_gravatar',
+  useGravatar: true,
   avatarStyle: 'initials',
   multiSelectEnabled: true,
   showSelectedCount: true,
@@ -132,7 +134,17 @@ function applyAll(p: UIPrefs): void {
 // the os while in system mode. call once at startup.
 export async function initPrefs(): Promise<void> {
   const loaded = await getUIPrefs()
-  prefs.set(loaded)
+  let useGravatar = loaded.avatarSource !== 'pfp'
+  try {
+    const saved = await getSetting(SettingKeys.useGravatar)
+    if (saved.found) {
+      useGravatar = saved.value === 'true'
+    }
+  } catch {
+    // Older installs may not have this setting yet; follow the selected preset.
+  }
+  const resolved = { ...loaded, useGravatar }
+  prefs.set(resolved)
 
   // on Linux the css prefers-color-scheme query never reports the desktop dark
   // preference, so resolve it natively first; elsewhere this returns "" and the
@@ -657,9 +669,16 @@ export function setBlockTrackingPixels(value: boolean): void {
 
 // setAvatarSource selects the sender-photo fallback chain (bimi_gravatar,
 // gravatar_bimi, pfp).
-export function setAvatarSource(source: string): void {
+export async function setAvatarSource(source: string): Promise<void> {
+  await setSetting(SettingKeys.avatarSource, source)
+  clearPhotoCache()
   prefs.update((p) => ({ ...p, avatarSource: source }))
-  void setSetting(SettingKeys.avatarSource, source)
+}
+
+// setUseGravatar controls whether Gravatar candidates can be loaded for sender photos.
+export function setUseGravatar(value: boolean): void {
+  prefs.update((p) => ({ ...p, useGravatar: value }))
+  void setSetting(SettingKeys.useGravatar, String(value))
 }
 
 // setAvatarStyle selects the generated placeholder look (initials, mono, pixel,

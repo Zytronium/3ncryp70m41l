@@ -59,6 +59,7 @@
     setAlwaysLoadImages,
     setBlockTrackingPixels,
     setAvatarSource,
+    setUseGravatar,
     setAvatarStyle,
     setMultiSelectEnabled,
     setMarkReadOnOpen,
@@ -219,6 +220,7 @@
     { cat: 'list', label: $t('settingsPanel.label.startupSelection'), kw: 'sidebar startup launch open default folder view last used' },
     { cat: 'list', label: $t('views.setting.label'), kw: 'views saved searches' },
     { cat: 'list', label: $t('settingsPanel.label.senderPhotos'), kw: 'avatar gravatar' },
+    { cat: 'list', label: $t('settingsPanel.toggle.useGravatar'), kw: 'gravatar avatar privacy email hash' },
     { cat: 'list', label: $t('settingsPanel.label.generatedStyle'), kw: 'avatar style' },
     { cat: 'display', label: $t('onboarding.extras.fontSize'), kw: 'message font size' },
     { cat: 'display', label: $t('settingsPanel.label.timeFormat'), kw: 'clock 24 hour' },
@@ -1234,6 +1236,15 @@
           <p class="hint">
             {$t('settingsPanel.hint.avatarSource')}
           </p>
+          <div class="toggle" title={$t('settingsPanel.hint.useGravatar')}>
+            <span class="row-label">{$t('settingsPanel.toggle.useGravatar')}</span>
+            <ToggleSwitch
+              checked={$prefs.useGravatar}
+              label={$t('settingsPanel.toggle.useGravatar')}
+              on:change={(e) => setUseGravatar(e.detail)}
+            />
+          </div>
+          <p class="hint">{$t('settingsPanel.hint.useGravatar')}</p>
 
           <div class="field">
             <span class="row-label">{$t('settingsPanel.label.generatedStyle')}</span>

@@ -1407,6 +1407,8 @@ const zhCN: Record<string, string> = {
   'settingsPanel.hint.startupSelection': 'EncryptoMail 启动时侧边栏选中的内容。若文件夹已不存在，则回退到聚合收件箱。',
   'settingsPanel.startup.lastUsed': '上次打开的视图',
   'settingsPanel.label.senderPhotos': '发件人照片',
+  'settingsPanel.toggle.useGravatar': '加载 Gravatar 头像',
+  'settingsPanel.hint.useGravatar': '启用此选项且发件人照片来源包含 Gravatar 时，Gravatar 会收到发件人电子邮件地址的哈希值以查找照片。“生成头像”来源不会加载远程照片。',
   'settingsPanel.hint.avatarSource': '“Logo”指发件人域名已验证的 BIMI Logo。Logo 和 Gravatar 会在你打开邮件时通过网络获取图片；“生成头像”则完全离线。未找到照片时，使用下方的生成样式。',
   'settingsPanel.label.generatedStyle': '生成样式',
   'settingsPanel.hint.previewSender': '预览发件人：',

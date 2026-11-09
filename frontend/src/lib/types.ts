@@ -441,9 +441,10 @@ export interface UIPrefs {
   // private preset in onboarding turns it on.
   blockTrackingPixels: boolean
   // avatarSource selects the sender-photo fallback chain: bimi_gravatar,
-  // gravatar_bimi, bimi, or pfp (generated only). avatarStyle picks the generated
-  // placeholder look: initials, mono, pixel, or geometric.
+  // gravatar_bimi, bimi, or pfp (generated only). useGravatar gates Gravatar
+  // candidates independently; avatarStyle picks the generated placeholder look.
   avatarSource: string
+  useGravatar: boolean
   avatarStyle: string
   // multiSelectEnabled allows selecting several rows at once for bulk actions.
   multiSelectEnabled: boolean

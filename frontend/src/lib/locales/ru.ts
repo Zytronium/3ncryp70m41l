@@ -1406,6 +1406,8 @@ const ru: Record<string, string> = {
   'settingsPanel.hint.startupSelection': 'Что будет выбрано в боковой панели при запуске EncryptoMail. Если выбранная папка недоступна, то будет показан каталог "Все входящие".',
   'settingsPanel.startup.lastUsed': 'Последнее, что было открыто',
   'settingsPanel.label.senderPhotos': 'Фото (аватарка) отправителя',
+  'settingsPanel.toggle.useGravatar': 'Загружать аватары Gravatar',
+  'settingsPanel.hint.useGravatar': 'Если включено для источника фото, использующего Gravatar, сервис получает хеш адреса отправителя для поиска фотографии. Источник «Сгенерированный» никогда не загружает фото из сети.',
   'settingsPanel.hint.avatarSource': '"Логотип" - это верифициированный BIMI-логотип домена отправителя. Логотип и Gravatar получают изображения через сеть, когда вы открываете сообщение; "Сгенерированный" остается полностью в автономном режиме. Если фотография не найдена, используется сгенерированный ниже стиль.',
   'settingsPanel.label.generatedStyle': 'Стиль аватарки отправителя',
   'settingsPanel.hint.previewSender': 'Предпросмотр отправителя:',

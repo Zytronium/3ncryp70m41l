@@ -1406,6 +1406,8 @@ const ar: Record<string, string> = {
   'settingsPanel.hint.startupSelection': 'ما يحدده الشريط الجانبي عند بدء تشغيل EncryptoMail. المجلد الذي لم يعد موجوداً يعود إلى البريد الوارد الموحّد.',
   'settingsPanel.startup.lastUsed': 'أياً كان ما فتحته آخر مرة',
   'settingsPanel.label.senderPhotos': 'صور المرسلين',
+  'settingsPanel.toggle.useGravatar': 'تحميل صور Gravatar',
+  'settingsPanel.hint.useGravatar': 'عند التفعيل مع مصدر صور يتضمن Gravatar، يرسل Gravatar تجزئة من بريد المرسل للبحث عن صورة. لا يحمل مصدر الصور المولدة صوراً بعيدة أبداً.',
   'settingsPanel.hint.avatarSource': '"الشعار" هو شعار BIMI الموثق لنطاق المرسل. يجلب الشعار وGravatar الصور عبر الشبكة عند فتح رسالة؛ "المولَّد" يبقى دون اتصال بالكامل. عندما لا تُوجد صورة، يُستخدم النمط المولَّد أدناه.',
   'settingsPanel.label.generatedStyle': 'النمط المولَّد',
   'settingsPanel.hint.previewSender': 'معاينة المرسل:',

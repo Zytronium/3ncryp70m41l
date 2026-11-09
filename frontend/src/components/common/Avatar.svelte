@@ -22,15 +22,15 @@
   // try them in order via the <img> error handler; index advances on each fail.
   let candidates: string[] = []
   let attempt = 0
-  $: void resolveCandidates($prefs.avatarSource, email, colored)
-  async function resolveCandidates(source: string, em: string, isColored: boolean): Promise<void> {
+  $: void resolveCandidates($prefs.avatarSource, email, colored, $prefs.useGravatar)
+  async function resolveCandidates(source: string, em: string, isColored: boolean, useGravatar: boolean): Promise<void> {
     candidates = []
     attempt = 0
     if (!isColored || !em) {
       return
     }
-    const found = await photosFor(source, em)
-    if (source === $prefs.avatarSource && em === email) {
+    const found = await photosFor(source, em, useGravatar)
+    if (source === $prefs.avatarSource && em === email && useGravatar === $prefs.useGravatar) {
       candidates = found ?? []
     }
   }

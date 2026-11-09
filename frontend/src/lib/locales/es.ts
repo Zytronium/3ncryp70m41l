@@ -1406,6 +1406,8 @@ const es: Record<string, string> = {
   'settingsPanel.hint.startupSelection': 'Lo que la barra lateral selecciona cuando se inicia EncryptoMail. Una carpeta que ya no existe vuelve a la bandeja de entrada unificada.',
   'settingsPanel.startup.lastUsed': 'Lo último que tenía abierto',
   'settingsPanel.label.senderPhotos': 'Fotos de remitente',
+  'settingsPanel.toggle.useGravatar': 'Cargar avatares de Gravatar',
+  'settingsPanel.hint.useGravatar': 'Al activarlo con una fuente de fotos de remitente que incluya Gravatar, Gravatar recibe un hash del correo del remitente para buscar una foto. La fuente Generado nunca carga fotos remotas.',
   'settingsPanel.hint.avatarSource': '"Logo" es el logo BIMI verificado del dominio del remitente. Logo y Gravatar obtienen imágenes por la red al abrir un mensaje; "Generado" se mantiene totalmente sin conexión. Cuando no se encuentra ninguna foto, se usa el estilo generado de abajo.',
   'settingsPanel.label.generatedStyle': 'Estilo generado',
   'settingsPanel.hint.previewSender': 'Remitente de vista previa:',

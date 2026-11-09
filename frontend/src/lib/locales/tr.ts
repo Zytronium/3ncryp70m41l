@@ -1406,6 +1406,8 @@ const tr: Record<string, string> = {
   'settingsPanel.hint.startupSelection': 'EncryptoMail başladığında kenar çubuğunun neyi seçtiği. Artık var olmayan bir klasör, birleşik gelen kutusuna döner.',
   'settingsPanel.startup.lastUsed': 'En son ne açıksa o',
   'settingsPanel.label.senderPhotos': 'Gönderen fotoğrafları',
+  'settingsPanel.toggle.useGravatar': 'Gravatar avatarlarını yükle',
+  'settingsPanel.hint.useGravatar': 'Gravatar içeren bir gönderen fotoğrafı kaynağıyla açıkken Gravatar, fotoğraf aramak için gönderenin e-posta adresinin bir karma değerini alır. Üretilmiş kaynağı uzak fotoğrafları hiçbir zaman yüklemez.',
   'settingsPanel.hint.avatarSource': '"Logo", gönderen alan adının doğrulanmış BIMI logosudur. Logo ve Gravatar, bir iletiyi açtığınızda görselleri ağ üzerinden çeker; "Üretilmiş" tamamen çevrimdışı kalır. Fotoğraf bulunamadığında aşağıdaki üretilmiş stil kullanılır.',
   'settingsPanel.label.generatedStyle': 'Üretilmiş stil',
   'settingsPanel.hint.previewSender': 'Gönderen önizlemesi:',
