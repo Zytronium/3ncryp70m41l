@@ -72,7 +72,7 @@
   import { loadViews, editingView, closeViewEditor, openViewEditor, views as savedViews } from './stores/views'
   import { selectSavedView } from './stores/selection'
   import { isMac } from './lib/i18n'
-  import { Quit, Hide, WindowIsFullscreen, WindowFullscreen, WindowUnfullscreen } from '../wailsjs/runtime/runtime'
+  import { Quit, Hide, WindowIsFullscreen, WindowFullscreen, WindowUnfullscreen, WindowSetMaxSize } from '../wailsjs/runtime/runtime'
   import { matchShortcut, comboHasModifier, isFunctionKeyCombo, type ShortcutAction } from './lib/shortcuts'
   import { cyclePane, focusPane as focusPaneArea } from './lib/panes'
   import { bindings, recording, initShortcuts } from './stores/shortcuts'
@@ -283,6 +283,11 @@
   }
 
   onMount(async () => {
+    // Wails' Linux default max size is the monitor geometry from startup. Clear
+    // that monitor-specific cap so moving the window to a wider display can use
+    // its full work area.
+    WindowSetMaxSize(32767, 32767)
+
     // cosmetic demo mode (--potatoes-are-nice). main.ts has normally answered
     // this before the first component mounted; this is the backstop for a
     // webview where the bindings were not ready that early.
