@@ -3,6 +3,8 @@
 Read this before touching `frontend/`. See also [design-tokens.md](design-tokens.md)
 for UI/CSS rules, which apply to everything in `src/components`.
 
+Anything in [encryptomail-fork.md](encryptomail-fork.md) overrides anything in this file.
+
 ## Layout
 
 - `src/components/` — feature subfolders: `sidebar`, `settings`, `compose`,

@@ -3,6 +3,8 @@
 Read this before touching anything under `frontend/src/components/`,
 `frontend/src/theme/`, or `frontend/src/style.css`.
 
+Anything in [encryptomail-fork.md](encryptomail-fork.md) overrides anything in this file.
+
 ## Style
 
 - Minimal, native-feeling desktop app: low chrome, no gradients or heavy

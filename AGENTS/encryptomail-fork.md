@@ -144,5 +144,3 @@ WebKitGTK handles `backdrop-filter` and large blurs less smoothly than Chromium.
 Primary: GltpStarion.otf
 Monospace: VictorMonoNerdFont.ttf
 Branding: GlitchGoblin.otf
-
-These three fonts are located in `/encrypto-fonts/`. Move them to their proper location in the project before using them.
